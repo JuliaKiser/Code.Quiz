@@ -1,4 +1,4 @@
-var timerEl = document.getElementById(".timer")
+var timerEl = document.getElementById("timer")
 
 function timer() {
     var timeLeft = 60;
@@ -24,3 +24,4 @@ function timer() {
           }
         }, 1000);
       }
+      timer();
