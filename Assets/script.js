@@ -1,5 +1,15 @@
-var timerEl = document.getElementById("timer")
+var timerEl = document.getElementById("timer");
+var startButton =document.getElementById("start")
 
+startButton.addEventListener("click", startQuiz);
+
+var index = 0;
+
+function startQuiz () {
+  timer ();
+  start.style.display="none";
+
+}
 function timer() {
     var timeLeft = 60;
 
@@ -24,4 +34,4 @@ function timer() {
           }
         }, 1000);
       }
-      timer();
+    
