@@ -13,10 +13,37 @@
         <h4 id="timer"></h4>
     </div>
     <button id="start">Start Quiz</button>
-    <form id="quiz-container">
-        <h1>Q: <span class="quest">This is question 1></span></h1>
-        <div class ="option"></div>
+    
+    <section>
+    <div class="quiz-container">
+        <div class="score"><span class="score-num">0</span>/<span class="answered-num">10</span></div>
+    <form id="quiz-box">
+        <h1>Q: <span class="quest">This is question 1</span></h1>
+        <div class="every-option">
+            <div class ="option">
+                <input type="radio" class="choice-prefix">
+                <p class="choice-text" data-number="1">Choice</p>
+            </div>
+            <div class="option">
+                <input type="radio" class="choice-prefix">
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class ="option">
+                <input type="radio" class="choice-prefix">
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class ="option">
+                <input type="radio" class="choice-prefix">
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+
+        </div>
+        <div class="submit_button">
+            <button type="submit">Submit</button>
+        </div>
     </form>
+    </div>
+    </section>
     <script src="./Assets/script.js"></script>
 </body>
 </html>

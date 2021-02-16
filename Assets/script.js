@@ -1,6 +1,25 @@
 var timerEl = document.getElementById("timer");
-var startButton =document.getElementById("start")
+var startButton =document.getElementById("start");
+var scoreBoard = document.getElementsByClassName('score')
+var scoreEl=document.getElementsByClassName('score-num')
+const question = document.querySelector('.quest');
+const choices = Array.from(document.querySelectorAll('.choice-text'));
 
+let currentQuestion ={};
+let acceptAnswer = true;
+let score = 0
+let availableQuestions = []
+
+let questions = [
+  {
+   question: 'When was the game Candy Land created?'
+   choice1: '1913',
+   choice2: '1925',
+   choice3: '1942',
+   choice4: '1975'
+   answer: 3,
+  }
+]
 startButton.addEventListener("click", startQuiz);
 
 var index = 0;
