@@ -15,34 +15,27 @@
     <button id="start">Start Quiz</button>
     
     <section>
-    <div class="quiz-container">
+    <div class="quiz-container" id="quizContainer" hidden>
         <div class="scores">
             <h1>Score:</h1>
             <h1 id="score-count">0</h1>
         </div>
     <form id="quiz-box">
-        <h1>Q: <span class="quest">This is question 1</span></h1>
+        <h1>question: <span class="quest" id="question">This is question 1</span></h1>
         <div class="every-option">
             <div class ="option">
-                <input type="radio" class="choice-prefix">
-                <p class="choice-text" data-number="1">Choice</p>
+                <p class="answer-text" data-number="1">Choice</p>
             </div>
             <div class="option">
-                <input type="radio" class="choice-prefix">
-                <p class="choice-text" data-number="2">Choice 2</p>
+                <p class="answer-text" data-number="2">Choice 2</p>
             </div>
             <div class ="option">
-                <input type="radio" class="choice-prefix">
-                <p class="choice-text" data-number="3">Choice 3</p>
+                <p class="answer-text" data-number="3">Choice 3</p>
             </div>
             <div class ="option">
-                <input type="radio" class="choice-prefix">
-                <p class="choice-text" data-number="4">Choice 4</p>
+                <p class="answer-text" data-number="4">Choice 4</p>
             </div>
 
-        </div>
-        <div class="submit_button">
-            <button type="submit">Submit</button>
         </div>
     </form>
     </div>

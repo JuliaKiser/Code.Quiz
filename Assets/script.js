@@ -1,13 +1,14 @@
 var timerEl = document.getElementById("timer");
 var startButton =document.getElementById("start");
 var scoreBoard = document.getElementsByClassName('scores')
-var scoreEl=document.getElementsByClassName('score-num')
-const question = document.querySelector('.quest');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
+var scoreText = document.getElementById('score-count')
+var question = document.querySelector('#question');
+var answers = Array.from(document.querySelectorAll('.answer-text'));
 
-let currentQuestion ={};
+let currentQuestion = {};
 let acceptAnswer = true;
 let score = 0;
+let questionCounter = 0;
 let availableQuestions = [];
 
 let questions = [
@@ -69,7 +70,62 @@ let questions = [
    }
 ]
 const SCORE_POINTS = 100
-constant MAX_QUESTIONS = 7
+const MAX_QUESTIONS = 7
+
+startGame = () => {
+  questionCounter = 0;
+  score = 0;
+  availableQuestions = [...questions]
+  getNewQuestion()
+}
+
+getNewQuestion = () => {
+
+  if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+  localStorage.setItem('mostRecentScore', score)
+
+  return window.location.assign('Assets/leaders.html')
+  }
+  const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+  currentQuestion = availableQuestions[questionsIndex]
+  question.innerText = currentQuestion.question
+
+  answers.forEach(choice => {
+    const number = choice.dataset['number']
+    choice.innerText = currentQuestion['choice' + number]
+  })
+  availableQuestions.splice(questionsIndex, 1)
+
+  acceptAnswer = true 
+}
+
+answers.forEach(choice => {
+  choice.addEventListener('click', e => {
+    if(!acceptAnswer) return
+
+    acceptAnswer = false
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset['number']
+
+    let classtoApply = selectedAnswer == currentQuestion.answer ? 'correct' :
+    'incorrect'
+
+    if(classtoApply === 'correct') {
+      incrementScore(SCORE_POINTS)
+    }
+    selectedChoice.parentElement.classList.add(classtoApply)
+    
+    setTimeout(() => {
+    selectedChoice.parentElement.classList.remove(classtoApply)
+    getNewQuestion()
+    },1000)
+  })
+})
+
+incrementScore = num => {
+  score += num
+  scoreText.innerText = score
+}
 
 startButton.addEventListener("click", startQuiz);
 
@@ -77,7 +133,9 @@ var index = 0;
 
 function startQuiz () {
   timer ();
+  startGame();
   start.style.display="none";
+  quizContainer.style.display="block";
 
 }
 function timer() {
