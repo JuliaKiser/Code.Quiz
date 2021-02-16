@@ -52,9 +52,12 @@ section {
     transition: .3s ease background-color;
     overflow:hidden;
 }
-.quiz-container .score {
+.quiz-container .scores {
     display:flex;
     justify-content: flex-end;
+}
+.quiz-container .scores #score-count{
+    margin-left: 10px;
 }
 form h1 {
     font-size:1.6rem;
