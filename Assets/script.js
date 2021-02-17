@@ -84,7 +84,7 @@ getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
   localStorage.setItem('mostRecentScore', score)
 
-  return window.location.assign('Assets/leaders.html')
+  return window.location.assign('Assets/endgame.html')
   }
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
   currentQuestion = availableQuestions[questionsIndex]
@@ -129,7 +129,6 @@ incrementScore = num => {
 
 startButton.addEventListener("click", startQuiz);
 
-var index = 0;
 
 function startQuiz () {
   timer ();

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of Game Results</title>
+    <link rel="stylesheet" href="./endgame.css">
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div id="endgame">
+                <h1 id="finalScore">0</h1>
+                <form class="endgame-form">
+                    <h2 id="end-text">Enter your name below to save your score!</h2>
+                    <input type="text" name="name" id="player" placeholder="Enter your name">
+                    <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+                </form>
+                <button class="playagain"><a href="/Code.Quiz/index.html">>Play Again</a></button>
+            </div>
+        </div>
+    </body>
+    
+</body>
+<script src="endgame.js">
+</script>
+</html>
