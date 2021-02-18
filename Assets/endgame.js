@@ -10,28 +10,38 @@ const MAX_HIGH_SCORES = 5
 
 finalScore.innerText = mostRecentScore
 
-playerName.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !username.value
-})
+/*playerName.addEventListener('keyup', () => {
+    saveScoreBtn.disabled = !playerName.value
+})*/
 
 saveHighScore = e => {
     e.preventDefault()
 
     const score = {
         score: mostRecentScore,
-        name: username.value
+        name:playerName.value
     }
 
     highScores.push(score)
 
-    highScores.sort((a,b) => {
+    /*/highScores.sort((a,b) => {
         return b.score - a.score
-    })
+    });*/
 
-    highScores.splice(5)
+    dispData();
+    //highScores.splice(5)
 
-    localStorage.setItem('highScores', JSON.stringify(highScores))
-    window.location.assign('/')
-
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    //window.location.assign('/')
     
 }
+
+function dispData(){
+    for(var i=0; i<highScores.length;i++){
+        var li = document.createElement("li");
+        li.textContent = highScores[i].name + ": "+highScores[i].score;
+        document.getElementById("players").appendChild(li);
+    }
+}
+
+dispData();

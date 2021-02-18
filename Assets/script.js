@@ -5,13 +5,13 @@ var scoreText = document.getElementById('score-count')
 var question = document.querySelector('#question');
 var answers = Array.from(document.querySelectorAll('.answer-text'));
 
-let currentQuestion = {};
-let acceptAnswer = true;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
+var currentQuestion = {};
+var acceptAnswer = true;
+var score = 0;
+var questionCounter = 0;
+var availableQuestions = [];
 
-let questions = [
+var questions = [
   {
    question: 'When was the game Candy Land created?',
    choice1: '1913',
@@ -84,7 +84,7 @@ getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
   localStorage.setItem('mostRecentScore', score)
 
-  return window.location.assign('Assets/endgame.html')
+  return window.location.assign('file:///Users/juliakiser/CodingBootcamp/homework/Codequiz/Code.Quiz/endgame.html')
   }
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
   currentQuestion = availableQuestions[questionsIndex]

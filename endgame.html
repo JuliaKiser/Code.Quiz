@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>End of Game Results</title>
-    <link rel="stylesheet" href="./endgame.css">
+    <link rel="stylesheet" href="./Assets/endgame.css">
 </head>
 <body>
     <body>
@@ -15,14 +15,15 @@
                 <form class="endgame-form">
                     <h2 id="end-text">Enter your name below to save your score!</h2>
                     <input type="text" name="name" id="player" placeholder="Enter your name">
-                    <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+                    <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">Save</button>
                 </form>
-                <button class="playagain"><a href="/Code.Quiz/index.html">>Play Again</a></button>
+                <button class="playagain"><a href="index.html">>Play Again</a></button>
+                <ul id="players"></ul>
             </div>
         </div>
     </body>
     
 </body>
-<script src="endgame.js">
+<script src="./Assets/endgame.js">
 </script>
 </html>
