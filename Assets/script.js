@@ -139,7 +139,7 @@ function startQuiz () {
 
 }
 function timer() {
-    var timeLeft = 6;
+    var timeLeft = 30;
 
     var timeInterval = setInterval(function() {
 
