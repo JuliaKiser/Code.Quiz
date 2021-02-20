@@ -6,10 +6,10 @@ var playAgan = document.getElementsByClassName('btn')
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
 
-const MAX_HIGH_SCORES = 5
+const MAX_HIGH_SCORES = 7
 
 finalScore.innerText = mostRecentScore
-
+//this allows us to save and log each score//
 saveHighScore = e => {
     e.preventDefault()
 
@@ -27,7 +27,7 @@ saveHighScore = e => {
     localStorage.setItem('highScores', JSON.stringify(highScores));
     
 }
-
+//creates the highscore display //
 function dispData(){
     for(var i=0; i<highScores.length;i++){
         var li = document.createElement("li");
@@ -35,5 +35,5 @@ function dispData(){
         document.getElementById("players").appendChild(li);
     }
 }
-
+//calls on the display data function//
 dispData();

@@ -1,8 +1,40 @@
-body {
-    background: rgb(138,137,168);
-    background: radial-gradient(circle, rgba(138,137,168,1) 0%, rgba(13,12,12,1) 65%, rgba(23,98,113,1) 100%);
-    height: 100vh;
-}
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
 .topnav {
     display:flex;
     padding: 0.5em;
@@ -13,11 +45,20 @@ body {
     display:flex;
     color:rgb(245, 223, 30);
     margin-top: 0%;
+    background-color: green;
+    padding: 10px;
+    border-radius: 20px;
+    border:solid,grey, 5px;
+
 }
 #timer {
     display:flex;
     margin-top: 0%;
     color:rgb(245, 223, 30);
+    background-color: green;
+    padding: 10px;
+    border-radius: 20px;
+    border:solid,grey, 5px;
 }
 #start {
     margin:auto;
@@ -26,11 +67,21 @@ body {
     display:flex;
     justify-content: center;
     font-size: 40px;
-    border-radius: 5px;
+    border-radius: 30px;
     background-color:rgb(245, 223, 30);
     font-weight: bold;
-    padding:25px;
+    padding:40px;
+
 }
+
+#start {
+    transition-duration: 0.4s;
+  }
+  
+#start:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
 
 section {
     min-height: 25vh;
@@ -47,7 +98,7 @@ section {
     width:90%;
     max-width: 600px;
     border:3px solid black;
-    background-color: rgb(66, 88, 88);
+    background-color: rgb(108, 156, 108);
     border-radius: 20px;
     color:floralwhite;
     transition: .3s ease background-color;
@@ -82,7 +133,8 @@ form .option p {
     justify-self: stretch;
 }
 form .option:hover {
-    background-color: thistle;
+    background-color: rgb(231, 228, 9);
+    font-size: 25px;
 }
 form .option input[type="radio"]:checked +p {
     color:rgb(5, 10, 10);

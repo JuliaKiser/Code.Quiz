@@ -11,6 +11,7 @@ var score = 0;
 var questionCounter = 0;
 var availableQuestions = [];
 
+//sets the variable for questions which we cycle through and call on later //
 var questions = [
   {
    question: 'When was the game Candy Land created?',
@@ -121,7 +122,7 @@ answers.forEach(choice => {
     },1000)
   })
 })
-
+//every time a question is answered correctly it will increment the overall score//
 incrementScore = num => {
   score += num
   scoreText.innerText = score
@@ -129,7 +130,7 @@ incrementScore = num => {
 
 startButton.addEventListener("click", startQuiz);
 
-
+//this function starts the quiz once the start quize button is pressed and also calls timer//
 function startQuiz () {
   timer ();
   startGame();
@@ -138,7 +139,7 @@ function startQuiz () {
 
 }
 function timer() {
-    var timeLeft = 60;
+    var timeLeft = 5;
 
     var timeInterval = setInterval(function() {
 
@@ -154,11 +155,21 @@ function timer() {
           } else {
             // Once `timeLeft` gets to 0, set `timerEl` to an empty string
             timerEl.textContent = '';
-            // Use `clearInterval()` to stop the timer
+            // You can use the `clearInterval()` to stop the timer
             clearInterval(timeInterval);
-            // Call the `displayMessage()` function
+            // Calls the `displayMessage()` function
+
             displayMessage();
-          }
+          } 
+          
         }, 1000);
+      //  Function to display message of time is up and to log score still //
       }
+      function displayMessage() {
+        alert("You ran out of time!")
+        localStorage.setItem('mostRecentScore', score)
+        window.location.assign('file:///Users/juliakiser/CodingBootcamp/homework/Codequiz/Code.Quiz/endgame.html')
+          }
+
+      
     

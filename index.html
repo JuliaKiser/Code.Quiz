@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link to CSS file -->
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
 <body>
+    <!-- Navigation Bar for Highscore Page Link and Time Countdown -->
     <div class="topnav">
         <a href="endgame.html" class="HighScores">View HighScores</a>
         <h4 id="timer"></h4>
     </div>
+    <!-- Insert Button to initiate quiz -->
     <button id="start">Start Quiz</button>
     
     <section>
@@ -20,6 +23,7 @@
             <h1>Score:</h1>
             <h1 id="score-count">0</h1>
         </div>
+    <!-- Created form to placehold quiz components created in javascript file -->
     <form id="quiz-box">
         <h1>Question: <span class="quest" id="question">This is question 1</span></h1>
         <div class="every-option">
@@ -40,6 +44,11 @@
     </form>
     </div>
     </section>
+    <!-- Div Classes that assist in styling background for webpage - correlating css in style.css file -->
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <!-- Link to Javascript File -->
     <script src="./Assets/script.js"></script>
 </body>
 </html>

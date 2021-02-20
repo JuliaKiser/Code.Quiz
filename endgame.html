@@ -11,19 +11,23 @@
     <body>
         <div class="container">
             <div id="endgame">
+                <h1 id=finalscore-title>Way to Go! Keep Playing!</h1>
                 <h1 id="finalScore">0</h1>
                 <form class="endgame-form">
                     <h2 id="end-text">Enter your name below to save your score!</h2>
                     <input type="text" name="name" id="player" placeholder="Enter your name">
                     <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">Save</button>
                 </form>
-                <button class="playagain"><a href="index.html">>Play Again</a></button>
+                <button class="playagain"><a href="index.html">Play Again</a></button>
+                <h1>List of HighScores</h1>
                 <ul id="players"></ul>
             </div>
         </div>
     </body>
-    
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div> 
+    <script src="./Assets/endgame.js">
+    </script>
 </body>
-<script src="./Assets/endgame.js">
-</script>
 </html>
