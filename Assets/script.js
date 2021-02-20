@@ -85,7 +85,7 @@ getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
   localStorage.setItem('mostRecentScore', score)
 
-  return window.location.assign('file:///Users/juliakiser/CodingBootcamp/homework/Codequiz/Code.Quiz/endgame.html')
+  return document.location.assign('endgame.html')
   }
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
   currentQuestion = availableQuestions[questionsIndex]
@@ -168,9 +168,7 @@ function timer() {
       function displayMessage() {
         alert("You ran out of time!")
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('file:///Users/juliakiser/CodingBootcamp/homework/Codequiz/Code.Quiz/endgame.html')
+        document.location.assign('endgame.html')
           }
-          //window.location.assign('file:///Users/juliakiser/CodingBootcamp/homework/Codequiz/Code.Quiz/endgame.html')
-          //
       
     
