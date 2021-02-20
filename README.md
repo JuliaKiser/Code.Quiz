@@ -1,12 +1,14 @@
 # Code.Quiz
 
+# Link to Code.Quiz
+
 ## Your Task
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+This weeks unit prepped us to create a code quiz utilizing all that we have learned so far html, css,javascript and Web APIs. As you make your way through my quiz you find that it is timed, you have multiple choice selections with some fun css features, and I implemented local storage to be able to retain scores and display in the final page.
 
-To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+This was a challenging one when it came to javascript but it was fun to see how I have developed from our first unit using html and css, grasper it way better.
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+Click Start Quiz and give it a whirl! 
 
 ## User Story
 
@@ -32,54 +34,7 @@ WHEN the game is over
 THEN I can save my initials and my score
 ```
 
-## Mock-Up
+## Demonstration 
 
-The following animation demonstrates the application functionality:
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
 
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
