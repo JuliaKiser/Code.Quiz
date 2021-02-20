@@ -10,10 +10,6 @@ const MAX_HIGH_SCORES = 5
 
 finalScore.innerText = mostRecentScore
 
-/*playerName.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !playerName.value
-})*/
-
 saveHighScore = e => {
     e.preventDefault()
 
@@ -24,15 +20,11 @@ saveHighScore = e => {
 
     highScores.push(score)
 
-    /*/highScores.sort((a,b) => {
-        return b.score - a.score
-    });*/
+  
 
     dispData();
-    //highScores.splice(5)
-
+ 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    //window.location.assign('/')
     
 }
 
