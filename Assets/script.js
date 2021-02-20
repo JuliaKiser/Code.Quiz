@@ -168,7 +168,7 @@ function timer() {
       function displayMessage() {
         alert("You ran out of time!")
         localStorage.setItem('mostRecentScore', score)
-        window.location.assign('Code.Quiz/endgame.html')
+        return window.location.assign('file:///Users/juliakiser/CodingBootcamp/homework/Codequiz/Code.Quiz/endgame.html')
           }
           //window.location.assign('file:///Users/juliakiser/CodingBootcamp/homework/Codequiz/Code.Quiz/endgame.html')
           //
